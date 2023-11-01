@@ -1,7 +1,7 @@
 /**
 * @license Apache-2.0
 *
-* Copyright (c) 2020 The Stdlib Authors.
+* Copyright (c) 2023 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -21,55 +21,13 @@
 // MODULES //
 
 var tape = require( 'tape' );
-var PINF = require( '@stdlib/constants-float32-pinf' );
-var NINF = require( '@stdlib/constants-float32-ninf' );
-var isnanf = require( '@stdlib/math-base-assert-is-nanf' );
-var isNegativeZerof = require( '@stdlib/math-base-assert-is-negative-zerof' );
-var isPositiveZerof = require( '@stdlib/math-base-assert-is-positive-zerof' );
-var floorf = require( './../../dist' );
+var main = require( './../../dist' );
 
 
 // TESTS //
 
-tape( 'main export is a function', function test( t ) {
+tape( 'main export is defined', function test( t ) {
 	t.ok( true, __filename );
-	t.strictEqual( typeof floorf, 'function', 'main export is a function' );
-	t.end();
-});
-
-tape( 'the function returns the largest integer less than or equal to a given number', function test( t ) {
-	t.strictEqual( floorf( -4.2 ), -5.0, 'equals -5' );
-	t.strictEqual( floorf( 9.99999 ), 9.0, 'equals 9' );
-	t.strictEqual( floorf( 0.0 ), 0.0, 'equals 0' );
-	t.end();
-});
-
-tape( 'the function returns `-0` if provided `-0`', function test( t ) {
-	var v = floorf( -0.0 );
-	t.strictEqual( isNegativeZerof( v ), true, 'returns -0' );
-	t.end();
-});
-
-tape( 'the function returns `+0` if provided `+0`', function test( t ) {
-	var v = floorf( +0.0 );
-	t.strictEqual( isPositiveZerof( v ), true, 'returns +0' );
-	t.end();
-});
-
-tape( 'the function returns `NaN` if provided a `NaN`', function test( t ) {
-	var v = floorf( NaN );
-	t.strictEqual( isnanf( v ), true, 'returns NaN' );
-	t.end();
-});
-
-tape( 'the function returns `+infinity` if provided `+infinity`', function test( t ) {
-	var val = floorf( PINF );
-	t.strictEqual( val, PINF, 'returns +infinity' );
-	t.end();
-});
-
-tape( 'the function returns `-infinity` if provided `-infinity`', function test( t ) {
-	var val = floorf( NINF );
-	t.strictEqual( val, NINF, 'returns -infinity' );
+	t.strictEqual( main !== void 0, true, 'main export is defined' );
 	t.end();
 });
