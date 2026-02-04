@@ -42,7 +42,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import floorf from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-floorf@esm/index.mjs';
+import floorf from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-floorf@v0.2.3-esm/index.mjs';
 ```
 
 #### floorf( x )
@@ -81,7 +81,7 @@ v = floorf( NaN );
 
 import uniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-uniform@esm/index.mjs';
 import logEachMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each-map@esm/index.mjs';
-import floorf from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-floorf@esm/index.mjs';
+import floorf from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-floorf@v0.2.3-esm/index.mjs';
 
 var opts = {
     'dtype': 'float32'
